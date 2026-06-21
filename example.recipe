@@ -8,7 +8,23 @@ class CustomDailyDigest(BasicNewsRecipe):
     auto_cleanup   = True            
     language       = 'en'
 
-    # Just define the list here. Do not add a parse_index loop below it!
+    # FORCE CALIBRE TO DOWNLOAD FULL WEBPAGES INSTEAD OF RSS SNIPPETS
+    # This fixes the AmazingRibs code dump and the Football Reference empty pages
+    has_embedded_content = False     
+
+    # FIREWALL BYPASS: Spoof a genuine, complete Windows Desktop browser profile
+    # This resolves the Chronicle of Higher Ed 403 Forbidden block
+    no_parallel_downloads = True # Keeps requests sequential to avoid triggering bot limits
+    get_browser_user_agent = lambda x: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36'
+    
+    extra_http_headers = {
+        'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+        'Accept-Language': 'en-US,en;q=0.9',
+        'Cache-Control': 'max-age=0',
+        'Connection': 'keep-alive',
+    }
+
+    # Consolidated stable multi-section target list
     feeds = [
         ('News: CSM All Stories', 'https://www.csmonitor.com/rss/feeds/all.rss'),
         ('Hunting: Petersen Small Game', 'https://www.petersenshunting.com/listing/hunting-small-game/172350?format=rss'),
