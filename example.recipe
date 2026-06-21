@@ -11,21 +11,21 @@ class CustomDailyDigest(BasicNewsRecipe):
     # Structured multi-section feed list
     feeds = [
         # News Section
-        ('News: CSM USA', 'https://www.csmonitor.com/rss/feeds/usa.rss'),
-        ('News: CSM World', 'https://www.csmonitor.com/rss/feeds/world.rss'),
+        ('News- CSM USA', 'https://www.csmonitor.com/rss/feeds/usa.rss'),
+        ('News- CSM World', 'https://www.csmonitor.com/rss/feeds/world.rss'),
         
         # Hunting Section
-        ('Hunting: Petersen Small Game', 'https://www.petersenshunting.com/rss/small-game'),
+        ('Hunting- Petersen Small Game', 'https://www.petersenshunting.com/rss/small-game'),
         
         # Cooking Section
-        ('Cooking: AmazingRibs', 'https://amazingribs.com/rss'),
+        ('Cooking- AmazingRibs', 'https://amazingribs.com/rss'),
         
         # Home Section
-        ('Home: Sweeten Stories', 'https://sweeten.com/blog/feed/'),
+        ('Home- Sweeten Stories', 'https://sweeten.com/blog/feed/'),
         
         # Education Section
-        ('Education: Chronicle of Higher Ed', 'https://www.chronicle.com/page/rss-feeds'),
+        ('Education- Chronicle of Higher Ed', 'https://www.chronicle.com/page/rss-feeds'),
         
         # Sports Section
-        ('Sports: Football Reference Blog', 'https://www.sports-reference.com/blog/feed/'), # Safe trailing comma
+        ('Sports- Football Reference Blog', 'https://www.sports-reference.com/blog/feed/'), # Safe trailing comma
     ]
