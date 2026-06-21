@@ -42,23 +42,6 @@ class Example(BasicNewsRecipe):
         'Sports: Football Reference Blog', 'https://www.sports-reference.com/blog/feed/',
     ]
 
-    def parse_index(self):
-        ans = []
-        for topic, url in self.feed_urls.items():
-            articles = []
-            content = self.get_page_content(url)
-            items = content.select('ul#articleItems .media-block__content')
-            for item in items:
-                date = item.span.get_text().strip()
-                if self.out_time_range(date):
-                    continue
-                url = urljoin(self.siteurl, item.a.get('href'))
-                title = item.a.get_text().strip()
-                articles.append(dict(url=url, title=title, date=date))
-            if len(articles) > 0:
-                ans.append((topic, articles))
-        return ans
-
     def get_page_content(self, url):
         try:
             return self.index_to_soup(url)
