@@ -1,7 +1,7 @@
 from calibre.web.feeds.news import BasicNewsRecipe
 
 class CustomDailyDigest(BasicNewsRecipe):
-    title          = 'Daily Digest: News, Hobbies & Sports'
+    title          = 'Daily Digest- News, Hobbies & Sports'
     description    = 'Custom aggregated news feed covering world events, woodworking, hunting, grilling, and education.'
     oldest_article = 7.0             # Fetches articles up to 7 days old
     max_articles_per_feed = 10       # Maximum articles per individual section feed
