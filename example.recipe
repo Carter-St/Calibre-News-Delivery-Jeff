@@ -22,7 +22,7 @@ class Example(BasicNewsRecipe):
         dict(class_=['wsw__embed', 'share--box'])]
 
     siteurl = 'https://learningenglish.voanews.com'
-    feed_urls = {
+    feed_urls = [
         # News Section (Updated stable main feed targets)
         'News: CSM All Stories', 'https://www.csmonitor.com/rss/feeds/all.rss',
         
@@ -40,7 +40,7 @@ class Example(BasicNewsRecipe):
         
         # Sports Section
         'Sports: Football Reference Blog', 'https://www.sports-reference.com/blog/feed/',
-    }
+    ]
 
     def parse_index(self):
         ans = []
