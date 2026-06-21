@@ -43,19 +43,4 @@ class CustomDailyDigest(BasicNewsRecipe):
     feeds = [
         # News Section (Verified working via your endpoint)
         ('News: CSM All Stories', 'http://rss.csmonitor.com/feeds/top'),
-        
-        # Hunting Section (Updated direct RSS syndication query target)
-        ('Hunting: Petersen Small Game', 'https://www.petersenshunting.com/rss/index.xml'),
-        
-        # Cooking Section (Full text fallback enabled via has_embedded_content=False)
-        ('Cooking: AmazingRibs', 'https://amazingribs.com/rss'),
-        
-        # Home Section
-        ('Home: Sweeten Stories', 'https://sweeten.com/blog/feed/'),
-        
-        # Education Section (Monitored via hardened network proxy hook above)
-        ('Education: Chronicle of Higher Ed', 'https://www.chronicle.com/page/rss-feeds'),
-        
-        # Sports Section
-        ('Sports: Football Reference Blog', 'https://www.sports-reference.com/blog/feed/'),
     ]
