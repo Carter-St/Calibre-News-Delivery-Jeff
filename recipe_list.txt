@@ -1,1 +1,21 @@
-Slashdot.org
+from calibre.web.feeds.news import BasicNewsRecipe
+
+class PersonalizedDailyNewspaper(BasicNewsRecipe):
+    title          = 'Personalized Daily Newspaper'
+    oldest_article = 1.0  # Fetch only articles from the last 24 hours
+    max_articles_per_feed = 20
+    auto_cleanup   = True # Extract main article body and remove scripts/ads
+    
+    # Define custom feeds to aggregate
+    feeds = [
+        ('BBC News', 'https://feeds.bbci.co.uk/news/rss.xml'),
+        ('USA News', 'https://thehill.com/homenews/feed/'),
+        ('PBS News', 'https://www.pbs.org/newshour/feeds/rss/politics')
+    ]
+    
+    # Custom styling for e-ink optimization
+    extra_css = '''
+        body { font-family: serif; }
+        h1 { font-size: 1.6em; text-align: center; }
+        .article_description { font-style: italic; color: #555; }
+    '''
