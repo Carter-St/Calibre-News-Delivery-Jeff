@@ -1,5 +1,5 @@
     # Check this list carefully!
-    feeds          = [
+    feeds = [
         # News Section (Updated stable main feed targets)
         ('News: CSM All Stories', 'https://www.csmonitor.com/rss/feeds/all.rss'),
         
